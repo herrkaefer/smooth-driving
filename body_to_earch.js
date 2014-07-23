@@ -49,8 +49,30 @@ function body_to_earch( alpha, beta, gamma, vx, vy, vz ) {
   x = ZXY[0]*vx + ZXY[1]*vy + ZXY[2]*vz;
   y = ZXY[3]*vx + ZXY[4]*vy + ZXY[5]*vz;
   z = ZXY[6]*vx + ZXY[7]*vy + ZXY[8]*vz;
-  return [x, y, z];
+  return {x: x, y: y, z: z};
 
 }
+
+// decompose vector (vx,vy) to components xt tangential to heading and yt normal to heading
+// in earch fram (East, North, Up), heading is in range [0,360) clockwise from north 
+function tangential_and_normal_decomposition(vx, vy, heading) {
+
+  var rad_heading = heading  ? heading  * degtorad : 0;
+
+  var xt = -Math.sin(rad_heading);
+  var yt = Math.cos(rad_heading);
+
+  var xn = Math.cos(rad_heading);
+  var yn = Math.sin(rad_heading);
+
+  vt = vx * xt + vy * yt;
+  vn = vx * xn + vy * yn;
+
+  return {xt: vt, xn: vn};
+  
+}
+
+// speed and heading infomation could be get by Geolocation API.
+// ref [Geolocation API Specification](http://dev.w3.org/geo/api/spec-source.html)
 
 
