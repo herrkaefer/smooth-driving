@@ -6,7 +6,7 @@ Let $a(t)$ represents the function (or time series) of acceleration. A good driv
 
 If a driving is smooth, there is no sudden braking, hard acceleration, and sharp bend, and more. In a word, smooth driving brings a perfect **passenger experience**.
 
-# The goal of this repo
+# Goal of this repo
 
 - Quantify the above defination, and evaluate the driving skill in real time.
 
@@ -18,7 +18,7 @@ If a driving is smooth, there is no sudden braking, hard acceleration, and sharp
 
 I didn't find any useful and practical theories about the problem. My current idea a simple threshold method.
 
-Suppose that the data is obtained in time interval $\Delta{t}$, set a parameter $\Delta{a'_m}$ to represent the maximum allowed variation for $a'$ in $\Delta{t}$. Whenever $\Delta{a'}>\Delta{a'_m}$ is detected, the driving score should be decreased accordingly. 
+Suppose that the data is obtained in time interval $\Delta{t}$, and let $\Delta{a'_m}$ represent the maximum allowed variation for $a'$ in $\Delta{t}$. Suppose the actual variation is $\Delta{a'}$ (absolute value). Whenever $\Delta{a'}>\Delta{a'_m}$ is detected, the driving score should be decreased according to $||\Delta{a'}-\Delta{a'_m}||$. 
 
 ## Score mapping
 
@@ -29,7 +29,7 @@ At any time, mapping the current continuity measure to an appropriate score (e.g
 
 After a challenge is performed, how to adjust the rating of the users?
 
-- Elo rating could be used. 
+- Elo rating is a good choice
 
 
 
