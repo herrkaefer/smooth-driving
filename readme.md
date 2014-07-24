@@ -12,13 +12,24 @@ If a driving is smooth, there is no sudden braking, hard acceleration, and sharp
 
 - Design a social game based on the evaluation.
 
-# key problems
+# Key problems
 
-## dynamic continuity measure for discrete time series
+## Dynamic continuity measure for discrete time series
 
-## score mapping
+I didn't find any useful and practical theories about the problem. My current idea a simple threshold method.
 
-## rating algorithm
+Suppose that the data is obtained in time interval $\Delta{t}$, set a parameter $\Delta{a'_m}$ to represent the maximum allowed variation for $a'$ in $\Delta{t}$. Whenever $\Delta{a'}>\Delta{a'_m}$ is detected, the driving score should be decreased accordingly. 
+
+## Score mapping
+
+At any time, mapping the current continuity measure to an appropriate score (e.g., 100-mark system)
+
+
+## Rating algorithm
+
+After a challenge is performed, how to adjust the rating of the users?
+
+- Elo rating could be used. 
 
 
 
