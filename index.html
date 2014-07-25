@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Smooth-Driving</title>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="smooth_driving.js"></script>
+
+</head>
+
+<body>
+
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+
+  <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+  <div class="main">
+    <h2>Device Event Data</h2>
+    <table>
+      <tr>
+        <td>Event Supported</td>
+        <td id="support"></td>
+      </tr>
+      <tr>
+        <td>Tilt Left/Right [gamma]</td>
+        <td id="gamma"></td>
+      </tr>
+      <tr>
+        <td>Tilt Front/Back [beta]</td>
+        <td id="beta"></td>
+      </tr>
+      <tr>
+        <td>Direction [alpha]</td>
+        <td id="alpha"></td>
+      </tr>
+      <tr>
+        <td>Body acceleration x</td>
+        <td id="ax"></td>
+      </tr>
+      <tr>
+        <td>Body acceleration y</td>
+        <td id="ay"></td>
+      </tr>
+      <tr>
+        <td>Body acceleration z</td>
+        <td id="az"></td>
+      </tr>
+      <tr>
+        <td>Earth acceleration x</td>
+        <td id="a_earth_x"></td>
+      </tr>
+      <tr>
+        <td>Earth acceleration y</td>
+        <td id="a_earth_y"></td>
+      </tr>
+      <tr>
+        <td>Earth acceleration z</td>
+        <td id="a_earth_z"></td>
+      </tr>
+      <tr>
+        <td>latitude</td>
+        <td id="latitude"></td>
+        <td>longitude</td>
+        <td id="longitude"></td>
+      </tr>
+      <tr>
+        <td>heading</td>
+        <td id="heading"></td>
+        <td>speed</td>
+        <td id="speed"></td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+</html>
+
+
+
+
